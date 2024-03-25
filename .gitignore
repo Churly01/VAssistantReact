@@ -137,6 +137,7 @@ src/face_recog/CMakeCache.txt
 src/face_recog/compile_commands.json
 src/face_recog/main
 src/face_recog/cmake_install.cmake
-.out
-.o
-.cmake
+*.out
+*.o
+*.cmake
+.webpack
