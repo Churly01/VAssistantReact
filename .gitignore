@@ -132,5 +132,6 @@ dist
 
 # C files
 src/face_recog/CMakeFiles/
+src/face_recog/CMakeCache.txt
 .out
 .o
