@@ -1,5 +1,6 @@
 const rules = require('./webpack.rules');
 const webpack = require('webpack');
+const path = require('path');
 
 rules.push({
   test: /\.css$/,
@@ -14,7 +15,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-      'React':     'react'
+      'React': 'react'
     })
   ],
   entry: './src/index.js',

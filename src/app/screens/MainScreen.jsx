@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import WeatherGadget from "./components/WeatherGadget";
 
 const MainSelection = () => {
 
@@ -6,24 +6,23 @@ const MainSelection = () => {
   // Add cool animation for the buttons to seem dynamic
 
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full">
-      <button
-        className="flex-1 bg-blue-500 text-white p-4 rounded-lg"
-      >
-        Hola USUARIO
-      </button>
-      <button className="flex-1 bg-blue-500 text-white p-4 rounded-lg">
-        Chatgpt
-      </button>
-      <img
-        id="frame"
-        alt="Frame" />
-      <button className="flex-1 bg-blue-500 text-white p-4 rounded-lg">
-        Clima
-      </button>
-      <button className="flex-1 bg-blue-500 text-white p-4 rounded-lg">
-        Wifi
-      </button>
+    // Second row occupies the full width
+    <div className="flex flex-col gap-5 w-full ">
+      <div className="flex gap-5 flex-[2] max-h-full overflow-hidden">
+        <div className='flex-1'>
+          <img
+            id="frame"
+            alt="Frame"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <button className="flex-1 bg-blue-500 text-white p-4 rounded-lg">
+          Chatgpt
+        </button>
+      </div>
+      <div className="flex-1 text-white p-4 rounded-lg">
+        <WeatherGadget />
+      </div>
     </div>
   );
 };
@@ -31,13 +30,13 @@ const MainSelection = () => {
 
 const MainScreen = () => {
   return (
-    <main className="flex min-h-full flex-col items-center p-10 gap-5 w-full">
+    <main className="flex min-h-full max-h-full flex-col items-center gap-5">
       <h1 className="text-4xl font-bold">Bienvenido a tu asistente</h1>
       <p className="text-lg text-center">
         Aquí podrás encontrar información sobre tus tareas, recordatorios y
         eventos.
       </p>
-      <div className="w-full flex flex-1">
+      <div className="flex flex-1 overflow-hidden w-11/12">
         <MainSelection />
       </div>
     </main>

@@ -28,7 +28,6 @@ const createWindow = () => {
     // First receive size of the frame
     if (frameSize === 0) {
       frameSize = data.readUInt32LE(0);
-      console.log('Frame size:', frameSize);
       frame = Buffer.from(data.slice(4));
       frameSize -= (data.length - 4);
     }

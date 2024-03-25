@@ -8,51 +8,8 @@
 using namespace std;
 using namespace cv;
 
-// int main(int argc, char** argv ) {
-
-//   // Video capture object
-//   VideoCapture cap(0);
-//   vector<uchar> buffer;
-//   // Only display images
-//   if (!cap.isOpened()) {
-//     cout << "Error opening video stream or file" << endl;
-//     return -1;
-//   }
-
-//   while (1) {
-//     // Create a frame object
-//     Mat frame;
-//     // Capture the frame
-//     cap >> frame;
-
-//     // Check if the frame is empty
-//     if (frame.empty())
-//       break;
-
-//     // Encode frame to jpg
-//     imencode(".jpg", frame, buffer);
-
-//     // Write size of buffer
-//     int size = buffer.size();
-//     cout.write((char*)&size, sizeof(int));
-
-//     // Write buffer
-//     cout.write((char*)&buffer[0], size);
-
-//     // Wait for parent to say something
-//     char b;
-//     cin >> b;
-
-//     // Press q on keyboard to exit
-//     char c = (char)waitKey(1);
-//     if(c=='q')
-//       break;
-//   }
-// }
-
 int main(int argc, char** argv ) {
   vector<uchar> buffer;
-
 
   // facesTrain();
 
@@ -152,7 +109,6 @@ int main(int argc, char** argv ) {
     // Wait for parent to say something
     char b;
     cin >> b;
-
 
     // Press q on keyboard to exit
     char c = (char)waitKey(1);

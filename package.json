@@ -9,7 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
@@ -38,9 +39,11 @@
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "patch-package": "^8.0.0",
     "postcss-loader": "^8.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-open-weather": "^1.3.2",
     "react-router-dom": "^6.22.3"
   }
 }
