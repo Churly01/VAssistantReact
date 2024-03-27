@@ -1,4 +1,5 @@
 import WeatherGadget from "./components/WeatherGadget";
+import OpenAiPrompt from "./components/OpenAiPrompt";
 
 const MainSelection = () => {
 
@@ -13,15 +14,12 @@ const MainSelection = () => {
           <img
             id="frame"
             alt="Frame"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover border-2 border-gray-300 rounded-lg"
           />
         </div>
-        <button className="flex-1 bg-blue-500 text-white p-4 rounded-lg">
-          Chatgpt
-        </button>
-      </div>
-      <div className="flex-1 text-white p-4 rounded-lg">
-        <WeatherGadget />
+        <div className='flex-1 border-2 border-gray-300 rounded-lg p-5 h-full overflow-hidden'>
+          <OpenAiPrompt />
+        </div>
       </div>
     </div>
   );
@@ -31,11 +29,6 @@ const MainSelection = () => {
 const MainScreen = () => {
   return (
     <main className="flex min-h-full max-h-full flex-col items-center gap-5">
-      <h1 className="text-4xl font-bold">Bienvenido a tu asistente</h1>
-      <p className="text-lg text-center">
-        Aquí podrás encontrar información sobre tus tareas, recordatorios y
-        eventos.
-      </p>
       <div className="flex flex-1 overflow-hidden w-11/12">
         <MainSelection />
       </div>
